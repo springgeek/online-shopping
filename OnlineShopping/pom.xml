@@ -13,6 +13,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>om.edu.squ</groupId>
+			<artifactId>OnlineShoppingBackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- JAVA -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -32,10 +37,22 @@
 		<!-- SPRING VERSION -->
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
